@@ -1,0 +1,345 @@
+body{
+    background-color: rgba(0,0,0,0.7);
+    z-index: -10;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    margin: auto;
+}
+
+.btn__div{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+button{
+    position: relative;
+    cursor: pointer;
+    font-size: 1205;
+    justify-content: center;
+    padding:  0.8rem 1rem;
+    font-size: 1.2rem;
+
+}
+.uil{
+    font-size: 1.7rem;
+}
+
+
+.btn__div{
+    transition: all  11s;
+}
+
+.uil-message .sspan{
+    padding-left: 0;
+    visibility: visible;
+    overflow: visible;
+    transition: all  3s ease;
+
+}
+
+.btn__div button:hover .uil-message{
+    padding-left: 2rem;
+}
+.btn__div button:hover .sspan{
+    visibility: hidden;
+    overflow: hidden;
+}
+
+
+/* .send__icon{
+    transform: rotate(90deg);
+} */
+
+/* ========================SECOND BTN======================== */
+
+#second__btn{
+    position: relative;
+    background-color: transparent;
+    border: none;
+    margin: auto;
+}
+#textSpan{
+    position: absolute;
+    top: 0;
+    left:  0;
+    height: 100%;
+    display: block;
+    border-radius: 2rem;
+    background-color: green;
+    width: 40%;
+    transition: width 0.5s ease;
+
+}
+
+#btn__text{
+    position: relative;
+    z-index: 11;
+    color: rgb(255, 255, 255);
+}
+
+#second__btn:hover #textSpan{
+    background: rgb(3, 194, 3);
+    width: 100%;
+}
+
+/* ======================== END SECOND BTN======================== */
+/* ======================== THIRD  BTN======================== */
+
+.third__btn{
+    margin: auto;
+    padding-left: 3rem;
+    font-size: 1.2rem;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    transition: all 1s ease;
+    color: white;
+
+
+}
+.third__btn .uil{
+    font-size: 1.7rem;
+    color: rgb(3, 0, 0);
+    position: absolute;
+    padding-top: 0.5rem;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 25%;
+    border-radius: 6rem;
+    background-color: lightpink;
+    color: white;
+    z-index: -1;
+    text-align: left;
+    align-self: center;
+    transition: all 600ms;
+
+
+    
+}
+
+
+.third__btn:hover .uil{
+    width: 100%;
+    padding-left: 1rem;
+    color: black;
+}
+
+.third__btn:hover{
+    color: rgb(2, 0, 0);
+}
+/* .third__btn::before{
+    content: "\2192";
+    
+
+} */
+
+/* ========================END THRID BTN======================== */
+/* ======================== FOURTH BTN======================== */
+.fourth__btn{
+    position: relative;
+    padding-right: 5rem;
+    text-align: center;
+    background-color: maroon;
+    border: none;
+    outline: none;
+    color: white;
+    transition: all 600ms ;
+    display: flex;
+
+}
+
+.uil-times{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-left: .5px solid gray;
+    outline: none;
+    background-color: red;
+    margin: 0;
+    height: 100%;
+    width: 30%;
+    transition: width 600ms ;
+}
+
+.fourth__btn:hover .uil-times{
+    width: 100%;
+    border: none;
+}
+
+.fourth__btn:active{
+    transform: scale(0.95);
+}
+
+
+/* ========================END FOURTH BTN======================== */
+
+/* ======================== fifth BTN======================== */
+
+.fifth__btn{
+    border-radius: 4rem;
+    border: none;
+    background-image: linear-gradient(to right, rgb(99, 99, 250), purple, lightpink);
+    color: white;
+    outline: none;
+    transition: all 600ms ease-in-out;
+}
+
+.fifth__btn:hover{
+    transform: scale(0.95);
+    box-shadow: 0 0 2rem 0.5rem lightpink, 0 0 2rem 0.5rem rgb(99, 99, 250);
+    color: white;
+    animation-name: fifth__btn-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+
+}
+
+@keyframes fifth__btn-animation {
+    0%{
+        background-image: linear-gradient(to right, rgba(99, 99, 250), rgb(128, 0, 128), rgb(255, 182, 193));
+
+    }
+    25%{
+        background-image: linear-gradient(to right, rgb(255, 182, 193), rgba(99, 99, 250), rgb(128, 0, 128));
+
+    }
+    50%{
+        background-image: linear-gradient(to right,rgba(128, 0, 128,0.6), rgba(255, 182, 193,0.6), rgba(99, 99, 25,0.6));
+
+    }
+    75%{
+        background-image: linear-gradient(to right, rgba(99, 99, 250,0.6), rgba(128, 0, 128, 0.6), rgba(255, 182, 193,0.6));
+
+
+    }
+    1000%{
+        background-image: linear-gradient(to right, rgba(255, 182, 193,0.6), rgba(99, 99, 250,0.6), rgba(128, 0, 128,0.6));
+
+
+    }
+    
+}
+/* ========================END FOURTH BTN======================== */
+
+
+/* ========================Form Field======================== */
+.container{
+    width: max-content;
+    margin: auto;
+    background-color: transparent;
+    padding: 2rem;
+    box-shadow: 0 0 3rem rgba(12, 0, 0, 0.7);
+    border-radius: 3rem;
+    display: grid;
+}
+
+.container input{
+    width: 20rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 1.5rem;
+
+}
+
+.container label{
+    font-size: 1.5rem;
+    padding-top: 0.4rem;
+    transition: all 300ms ease-in-out;
+
+}
+.input__container{
+    margin-top: 2rem;
+    position: relative;
+
+}
+
+.input__container input ~ label{
+    /* margin-left: -21rem; */
+    position: absolute;
+    top: 0;
+    left: 13px;
+    height: 100%;
+    /* transform: translateY(-50%); */
+    /* z-index: -1; */
+    cursor:text;
+    /* border: 2px solid red; */
+    pointer-events: none;
+
+}
+
+.container button{
+    margin-top: 1.5rem;
+    background-color: lightblue;
+    outline: none;
+    border: none;
+    border-radius: 3rem;
+}
+
+.input__container input:focus {
+    border: 1px solid gray;
+    outline:  none;
+}
+
+.input__container input:focus ~ label, .input__container input:valid ~ label {
+    color: gray;
+    /* background-color: rgba(0,0,0, 0.5); */
+    transform: scale(0.8) translate(0, -50%);
+    /* border: 3px solid black; */
+}
+
+.submit__btn:hover{
+    background-color: rgb(103, 203, 236);
+}
+.submit__btn:active{
+    background-color: rgb(103, 203, 236);
+    transform: scale(0.95);
+}
+/* ========================END form field======================== */
+
+
+/* ========================SVG ROTATE======================== */
+
+.svg1{
+    transition: all 2s;
+    width: 70%;
+    margin: auto;
+    animation: svg__rotate 5s linear infinite alternate;
+}
+
+/* .svg1:hover{
+    transform: rotate(270deg);
+} */
+
+@keyframes svg__rotate {
+    /* 0%{
+        transform: rotate(2deg);
+    } */
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ========================SVG ROTATE======================== */
