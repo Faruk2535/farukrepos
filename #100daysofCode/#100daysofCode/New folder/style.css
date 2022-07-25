@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    font-size: 22px;
+    line-height: 1.2rem;
+
+}
+
+:root{
+    --bg-color1: rgb(91, 87, 156);
+    --bg-color2: rgb(84, 79, 187);
+    --bg-color3: rgb(14, 27, 214);
+    --border-color: 1px soild gray;
+
+    --width-bs: 90%;
+    --width-ms: 94%;
+    --width-ss: 97%;
+
+    --transition: all 400ms;
+}
+
+.btn{
+    cursor: pointer;
+    padding: 1rem 2rem;
+
+}
+
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.2rem;
+}
+
+body, html{
+    background-color: var(--bg-color1);
+}
+.container{
+    width: var(--width-bs);
+    margin: auto;
+}
+
+
+/*======================Nav Bar======================*/
+.header__container{
+    display: flex;
+    height: 5rem;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+}
+.header__nav-item{
+    margin-right: auto;
+    /* background-color: red; */
+    position: absolute;
+    right: 10%;
+}
+.header__nav-item ul{
+    display: flex;
+    gap: 2rem;
+
+}
+
+.header__nav-item ul li{
+    list-style: none;
+    color: white;
+}
+
+
+
+
+
+
+/*======================end Nav Bar======================*/
+
+/*======================body section======================*/
+.intro__section{
+    background-color: var(--bg-color2);
+    padding: 1rem 0;
+    margin-top: 6rem;
+}
+.intro__container{
+    display: grid;
+    grid-template-columns: 45% 55%;
+    gap: 2rem;
+}
+
+.intro__container-left img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.nav__button button{
+    outline: none;
+    border: none;
+    margin: auto -3px;
+    border-right: 2px solid black;
+}
+.nav__button button:last-child{
+    border-right: none;
+}
+.nav__button button:hover{
+    background-color: gray;
+    color: white;
+}
+
+
+
+hr{
+    height: .3rem;
+    margin: 1rem 0;
+    color: gray;
+    background-color: gray;
+}
+
+/* .nav__article > article{
+    background-color: red;
+    display: none;
+    width: 100%;
+} */
+
+.home__article, .vission__article, .mission__article{
+    display: none;
+    width: 80%;
+    text-align: justify;
+    line-height: 2rem;
+    color: whitesmoke;
+}
+
+.active{
+    display: block;
+}
+
+/*======================body section======================*/
+
