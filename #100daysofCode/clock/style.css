@@ -24,7 +24,7 @@ body, html{
 h1{
     font-size: 3rem;
 }
-.number{
+input[type*=number]{
     font-size: 3rem;
     background-color: transparent;
     width: 10rem;
@@ -85,44 +85,16 @@ h5{
     min-width: 216px;
     min-height: 186;
     position: relative;
-    /* box-shadow: inset 10px 10px white, inset -10px -10px gray; */
 }
 
-:is(.time1, .time2, .time3)::after{
-    animation-name: timeAnimation2;
+.time::before{
     content: "";
-    width: 200px;
-    position: absolute;
-    opacity: 1;
-    background-image: url(./images/two.jpg);
-    position: absolute;
-    top: 47%;
-    height: 45%;
-    border-top: 0.5rem dotted black;
-    box-shadow: -10px 10px hsl(34, 41%, 39%), 10px 10px hsl(34, 39%, 45%);
-    opacity: 1;
-    transition: 500ms ease;
-    transform: 1s ease ;
-    animation-duration: 50ms;
-    animation-delay: 550ms;
-    animation-iteration-count: 1;
-    transition: 0.5s ease;
-
-
-
-
-}
-:is(.time1, .time2, .time3)::before{
-    animation-name: var(--animmation);
-    content: "";
-    width: 200px;
+    width: 216px;
     position: absolute;
     bottom: 47%;
-    height: 45%;
-    /* transform: skewy(-20deg); */
+    height: 50%;
+    transform: skewy(3deg,-20deg);
     transform-origin: bottom;
-    outline: none;
-    box-shadow: 10px -10px #d4bc8f, -10px -10px #e0c798;
 
 
     
@@ -130,27 +102,39 @@ h5{
     background-image: url(./images/one.jpg);
     position: absolute;
     transform: 1s ease ;
-    animation-name: var(--animmation);
+    animation-name: var(--animmationn);
     transform-origin: top;
-    animation-duration: 100ms;
-    animation-delay: 500ms;
-    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-iteration-count: 5;
     border-bottom: 0.5rem dotted black;
     z-index: 10;
     transition: 0.5s ease;
-
-
-
 }
 
 .time::after{
 
+    content: "";
+    width: 216px;
+    position: absolute;
+    opacity: 1;
+    background-image: url(./images/two.jpg);
+    position: absolute;
+    top: 47%;
+    height: 50%;
+    border-top: 0.5rem dotted black;
+
+
+    transform: 1s ease ;
+    animation-name: timeAnimation22;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+    transition: 0.5s ease;
+
+
 } 
 
-
-
-
-.time .number{
+.time input{
     font-size: 8rem;
 }
 .countdown__container > span{
@@ -164,8 +148,7 @@ h5{
     20%{
         height: 50%;
         opacity: 1;
-        transform: skewy(-5deg);
-
+        transform: skewy(-5deg)
 
 
 
@@ -174,34 +157,28 @@ h5{
     40%{
         height: 37.5%;
         opacity: 1;
-        transform: skewy(-4deg);
-
+        transform: skewX(10deg)
 
 
     }
     60%{
         height: 25%;
         opacity: 1;
-        transform: skewy(-3deg);
-
-
+        transform: skewX(10deg)
 
     }
     80%{
         height: 12.5%;
-        opacity: .5;
-        transform: skewy(5deg);
-
-
+        opacity: .7;
+        transform: skewX(15deg)
 
         /* border: none; */
 
     }
     100%{
         height: 0;
-        opacity: .5;
-        transform: skewx(-5deg);
-
+        opacity: 0.5;
+        transform: skewX(20deg)
 
     }
     
@@ -212,8 +189,6 @@ h5{
     20%{
         height: 0;
         opacity: 0.5;
-        transform: skewy(-5deg);
-
 
 
     }
@@ -221,30 +196,22 @@ h5{
     40%{
         height: 12.5%;
         opacity: 0.5;
-        transform: skewX(-5deg);
-
 
     }
     60%{
         height: 25%;
-        /* opacity: 0.5; */
-        transform: skewX(-4deg);
-
+        opacity: 0.5;
 
 
 
     }
     80%{
         height: 37.5%;
-        /* opacity: .7; */
-        transform: skewX(-3deg);
-
+        opacity: .7;
     }
     100%{
         height: 50%;
-        /* opacity: 1; */
-        transform: skewX(-2deg);
-
+        opacity: 1;
         /* border: none; */
     }
     
