@@ -1,0 +1,13 @@
+:root{
+    --bg-white: white;
+    --bg-black: black;
+
+    --font-black: rgb(20, 19, 19);
+
+    transition: .2s;
+
+    --screen-lg: 85%;
+    --screen-md: 90%;
+    --screen-sm: 95%;
+    
+}

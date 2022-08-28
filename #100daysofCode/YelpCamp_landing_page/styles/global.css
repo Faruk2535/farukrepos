@@ -1,0 +1,72 @@
+*{
+    border: none;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    color: rgb(39, 38, 38);
+
+
+}
+
+body, html{
+    font-family: 'Archivo', sans-serif;
+
+}
+@import url(variable.css);
+
+.btn{
+    cursor: pointer;
+    border-radius: .3rem;
+    padding: .8rem 1rem;
+    position: relative;
+}
+.btn:active{
+    position: relative;
+    top: 2px;
+    
+}
+
+.btn-primary{
+    color: white;
+    background-color: var(--bg-black);
+}
+.btn-secondary{
+    color: black;
+    background-color: transparent;
+    border: 1px solid rgb(236, 232, 232);
+}
+
+h1{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 2.3rem;
+}
+h3{
+    font-size: 2rem;
+}
+h4{
+    font-size: 1.7rem;
+}
+h5{
+    font-size: 1.4rem;
+}
+h6{
+    font-size: 1.2rem;
+}
+
+img{
+    object-fit: cover;
+}
+p{
+    line-height: 1.4rem;
+}
+
+hr{
+    height: 1px ;
+    color: rgb(236, 232, 232);
+    background-color: rgb(236, 232, 232);
+    margin-block: 2rem;
+}

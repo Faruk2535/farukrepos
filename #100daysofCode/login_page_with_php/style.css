@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    line-height: 1.4rem;
+    font-size: 18px;
+    /* border: .5px solid white; */
+}
+
+html, body{
+    background-color: rgb(13, 13, 31);
+}
+.btn{
+    padding: .5rem 1rem;
+    cursor: pointer;
+
+}
+
+a{
+    text-decoration: none;
+}
+a:link{
+    color: blue;
+}
+a:active{
+    color: wheat;
+}
+a{
+    color: white;
+}
+
+
+
+
+/* login styling */
+
+.login__section, .signup__section{
+    width: max-content;
+    margin: auto;
+    border: 2px solid gray;
+    border-radius: 1rem;
+    margin-top: 6rem;
+    padding: 1rem;
+    text-align: center;
+}
+.login__section h2, .signup__section h2{
+    font-size: 2em;
+    color: gray;
+    margin-bottom: 2rem;
+}
+#login__form > div, #signup__form>div{
+    position: relative;
+    margin-bottom: 1rem;
+
+}
+
+#signup__form h5, #login__form h5{
+    color: blue;
+}
+
+input{
+    width: 20rem;
+    height: 2.4rem;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    transition: 200ms;
+    color: wheat;
+}
+
+input ~ label{
+    color:  lightgray;
+    font-size: 20px;
+    position: absolute;
+    left: 1rem;
+    top: .5rem;
+    pointer-events:none;
+    background-color: rgb(13, 13, 31);
+    transition: 200ms;
+}
+
+.btn-create{
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: blue;
+    color: white;
+}
+
+input:focus ~label, input:user-valid ~ label, input:user-invalid ~ label{
+    transform: translateY(-94%) scale(.8);
+    /* transform: ; */
+}
+
+input:user-invalid{
+    border-color: red;
+}
+input:user-valid{
+    border-color: blue;
+}
+
+
+
+input:focus{
+    border-color: wheat;
+}
+
+

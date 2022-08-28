@@ -1,0 +1,547 @@
+@import url(./global.css);
+@import url(./variable.css);
+
+
+/* ==========LANDING PAGE============ */
+.container{
+    width: var(--screen-lg);
+    margin: 0 auto;
+}
+
+.mobile__logo, .mobile__hero-img{
+    display: none;
+}
+
+
+.left__hero{
+    padding: 2rem 6rem;
+}
+.landing__page{
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+
+.hero__img img{
+    object-fit: cover;
+    height: 100%;
+    width: 100vh;
+    position: fixed;
+}
+
+.body h1{
+    margin-top: 4rem;
+}
+.body p{
+    margin-block: 1rem;
+}
+.body button{
+    border-radius: .2rem;
+}
+
+.partner{
+    margin-top: 2rem;
+    color: rgb(54, 54, 54);
+}
+
+.partner ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.mobile__hero-img{
+    display: none;
+}
+
+@media screen and (max-width: 1200px){
+
+
+    .container{
+        width: var(--screen-md);
+    }
+
+    .mobile__logo, .mobile__hero-img{
+        display: block;
+    }
+
+    .mobile__logo{
+        margin: 1rem 2.5rem 0;
+    }
+    
+    .landing__page{
+        grid-template-columns: 1fr;
+        position: relative;
+
+    }
+    .left__hero>img{
+        display: none;
+    }
+
+    .hero__img{display: none;}
+    .left__hero{
+        padding: 2rem 0;
+    }
+    .body h1{
+        margin-top: 1rem;
+    }
+    
+
+    .mobile__hero-img{
+
+        display: block;
+        width: 100%;
+        margin-top: 2rem;
+        padding: 0;
+    }
+    
+    
+}
+@media screen and (max-width: 600px){
+    .container{
+        width: var(--screen-sm);
+    }
+    .mobile__logo{
+        margin: 1rem .7rem 0;
+    }
+
+}
+
+/* ==========END OF LANDING PAGE============ */
+
+/* ==========LOGIN PAGE============ */
+
+
+.login__main{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 100vh;
+}
+
+.left__signin{
+    margin: 2rem 6rem;
+}
+.left__signin> *{
+    width: 80%;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
+.left__signin h1{
+    margin-top: 5rem;
+}
+form[name=login__form]{
+    margin-top: 2rem;
+    width: 75%;
+}
+form[name=login__form]>*{
+    display: block;
+}
+form[name=login__form] button{
+    width: 100%;
+    border-radius: .4rem;
+    color: whitesmoke;
+    margin-block: .5rem;
+}
+
+.left__signin > p a{
+    color: deepskyblue;
+    font-weight: 700;
+}
+input{
+    padding: 1rem;
+    width: 100%;
+    background-color: rgb(243, 240, 240);
+    margin-bottom: 1rem;
+    border-radius: .3rem;
+}
+
+label{
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: gray;
+}
+
+.right__signin{
+    display: grid;
+    place-content: center;
+    background-color: rgb(247, 245, 240);
+    width: 100%;
+
+}
+
+.right__signin > *{
+    width: 55%;
+    margin: 0 auto;
+}
+.testimony{
+    display: flex;
+    gap: .5rem;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 1200px){
+    .right__signin > *{
+        width: 90%;
+    }
+    .right__signin{
+        padding-block: 2rem;
+    }
+    
+    .login__main{
+        grid-template-columns: 1fr;
+    }
+    .left__signin{
+        margin: 2rem auto;
+    }
+    .heading{
+        width: 100%;
+    }
+
+    
+}
+
+@media screen and (max-width: 600px){
+
+    .right__signin h3{
+        text-align: justify;
+    }
+
+    form[name=login__form]{
+        width: 100%;
+    }
+
+    
+
+
+}
+/* ========== END OF LOGIN PAGE============ */
+
+
+/* ==========SEACH PAGE============ */
+
+.info p{
+    padding: .5rem;
+    text-align: center;
+    margin: 0  auto 2rem;
+    background-color: black;
+    color: white;
+    
+}
+.info p a{
+    color: skyblue;
+    font-weight: 500;
+}
+
+header{
+    margin-block: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > div > a{
+    text-decoration: none;
+    color: black;
+}
+header > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+header div:last-child a:last-child{
+    border-radius: .3rem;
+    text-decoration: none;
+}
+header div:last-child a:first-child{
+    display: none;
+}
+header > img{
+    display: none;
+}
+
+.welcome{
+    background-color: rgb(211, 206, 201);
+    padding: 4rem 2rem;
+    margin-bottom: 4rem;
+
+}
+.welcome > *{
+    width: 35%;
+    margin-bottom: .5rem;
+    color: rgb(68, 67, 67);
+}
+
+.welcome h2{
+    color: black;
+    font-size: 2.2rem;
+}
+/* *{
+    border: 1px solid black;
+} */
+form[name="search__form"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+form[name="search__form"] input{
+    background-color: white;
+    border: 1.5px solid gray;
+    margin: auto;
+}
+
+.campgrounds{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+}
+
+.campground{
+    border: 1px solid rgb(236, 232, 232);
+    padding: 1rem;
+    border-radius: .3rem;
+    color: rgb(83, 81, 81);
+
+}
+.campground > *{
+    margin-bottom: .5rem;
+    display: block;
+    
+}
+.campground > h5{
+    color: black;
+    /* font-size: 90%; */
+    
+}
+.campground > img{
+    width: 100%;
+    height: 15rem;
+    border-radius: .3rem;
+}
+
+.campground > a{
+    text-decoration: none;
+    text-align: center;
+    font-weight: 800;
+
+
+}
+@media screen and (max-width: 1200px){
+    .campgrounds{
+        grid-template-columns: repeat(2, 1fr);
+        gap: .4rem;
+    }
+    header div:first-child a:last-child{
+        display: none;
+    }
+    header div:last-child a:first-child, header > img{
+        display: block;
+    }
+    header{
+        position: relative;
+    }
+    header > img{
+        width: 2rem;
+    }
+    header div:last-child{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 2rem;
+        box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+        
+        
+    }
+    header div:last-child > *{
+        display: none;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        color: black;
+        background-color: whitesmoke;
+        transition: var(--transition);
+        
+    }
+    header div:last-child a:hover{
+        background-color: black;
+        color: white;
+
+    }
+    header div:last-child {
+        gap: 0;
+    }
+    .welcome > *{
+        width: 68%;
+    }
+
+    .welcome h2{
+        font-size: 1.7rem;
+    }
+    footer{
+        padding-block: 1rem !important;
+    }
+
+    
+
+    
+    
+}
+@media screen and (max-width: 600px){
+    .welcome > *{
+        width: 85%;
+    }
+    .campgrounds{
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+
+
+/* ==========END OF SEARCH PAGE============ */
+
+/* ==========CampGround PAGE============ */
+
+.camp__location{
+    display: grid;
+    grid-template-columns: 30% auto;
+    margin-block: 2rem;
+    grid-gap: 4rem;
+}
+.camp__right-section > div{
+    margin-bottom: 2.5rem;
+
+}
+.camp__right-section * p{
+    text-align: justify;
+
+}
+.camp__location section > div{
+    /* border: 1px solid rgb(236, 232, 232); */
+    padding: 3rem;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.camp__map img{
+    width: 100%;
+}
+.camp__info > *{
+    margin-bottom: 1rem;
+
+}
+.camp__info > img{
+    width: 100%;
+}
+
+.camp__name, .commentor__name{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.commentor__name p:first-child{
+    font-weight: 600;
+}
+
+.comments > a{
+    text-decoration: none;
+}
+.comments{
+    text-align: right;
+}
+
+@media screen and (max-width: 1200px){
+    .camp__location{
+        grid-template-columns: 1fr;
+        
+    }
+    .camp__location section:first-child{
+        order: 2;
+    }
+    .camp__map img{
+        width: 100%;
+    }
+    
+    
+
+
+
+}
+
+
+
+
+
+/* ==========END OF CAMPGROUND PAGE============ */
+
+
+/* ==========COMMENT PAGE============ */
+.newcomment{
+    margin: 3rem auto;
+    width: 45%;
+}
+.btn-comment{
+    width: 100%;
+    font-weight: 700;
+}
+
+textarea{
+    background-color: rgb(243, 240, 240);
+    width: 100%;
+    height: 16rem;
+    padding: 1rem;
+}
+form[name=comment__form] > textarea {
+    margin-top: 1rem;
+}
+
+
+.newcomment > *, .newcomment form > *{
+    margin-bottom: .5rem;
+
+}
+
+@media screen and (max-width: 1200px){
+    .newcomment{
+        width: 75%;
+    }
+    
+}
+@media screen and (max-width: 600px){
+    .newcomment{
+        width: 95%;
+    }
+
+
+}
+
+
+
+
+/* ==========END OF COMMENT PAGE============ */
+
+/* ==========ADD CAMPGOUND PAGE============ */
+
+form[name=campground__form] > input , form[name=campground__form] > textarea{
+    margin-top: .7rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/* ==========END OF ADD CAMPGROUN PAGE============ */
+
+
+/* ==========SEACH PAGE============ */
+
+
+
+/* ==========END OF SEARCH PAGE============ */
+
+
+footer{
+    padding-block: 3rem;
+}
