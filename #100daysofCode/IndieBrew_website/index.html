@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndieBrew</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+    <header>
+        <nav class="container nav__container">
+            <img src="./Assets/Logo.svg" alt="Logo">
+            <div class="nav__list">
+                <img src="./Assets/Hamburger Menu.svg" alt="Hamburger" id="mobile__hamburger">
+                <div class="list__items">
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#" class="get__started"><span class="bold">Get Started</span> - it's free</a></li>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="intro">
+        <div class="container intro__container">
+            <div class="intro__left">
+                <h2>Your weekly personal feed digest.</h2>
+                <p>with IndieBrew, get personal feeds from resources all around the web, including Reddit, HackerNews, IndieHackers and much more.</p>
+                <br>
+                <a href="#" class="get__started"><span class="bold">Get Started</span> - it's free</a>
+                <br>
+                <br>
+                <img src="./Assets/User Avatars.svg" alt="">
+                <p>Join <span class="bold blue-bold">32,642</span> IndieBrewers in curating their personal digest.</p>
+                
+            </div>
+
+            <div class="intro__right">
+                <img src="./Assets/Feed Mockup.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <br><br><br>
+
+    <section class="resources">
+        <div class="container resources__container">
+            <div class="resources__left">
+                <h3>Curate your feed from dozen of resources</h3>
+                <p>we cover all major platforms where one could not want to curate their feed from Reddit, ProductHurt, IndieHackers ans so much more. </p>
+                <a href="#"><span class="bold blue-bold">See Full list of resources</span></a>
+            </div>
+
+            <div class="resources__right">
+                <img src="./Assets/Social Media Icons.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+
+
+    <section class="waitlist">
+        <div class="container waitlist__container">
+            <div class="waitlist__left">
+                <img src="./Assets/Phone Mockup.png" alt="">
+            </div>
+            <div class="waitlist__right">
+                <h2>Access your feed from the comfort of your phone</h2>
+                <p>with native apps for both iOS and Andriod, accessing your curated content has never been easier</p>
+                <a href="#"><span class="bold blue-bold">Sign up for the waitlist </span></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer__container">
+            <article class="footer__left">
+                <p><span class="bold bk-bold">IndieBrew</span></p>
+                <p>With IndieBrew, get personal feeds from resources all around the web, including Reddit, HackerNews, and much more.</p>
+
+                <br>
+                <p>made with <span>love</span> in the UK.</p>
+            </article>
+            <div class="footer__right">
+                <article>
+                    <p><span class="bk-bold">Sitemap</span></p>
+                    <li><a href="#">Homepage</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </article>
+                <article>
+                    <p><span class="bk-bold">Resources</span></p>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </article>
+                <article>
+                    <p><span class="bk-bold">Company</span></p>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </article>
+                <article>
+                    <p><span class="bk-bold">Portfolios</span></p>
+                    <li><a href="#">HackerNews</a></li>
+                    <li><a href="#">Reddit</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </article>
+    
+
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+<script>
+    const hambugger = document.getElementById('mobile__hamburger')
+    hambugger.addEventListener('click', ()=>{
+        document.querySelector('.list__items').classList.toggle('show');
+    })
+
+</script>
+
+</html>
