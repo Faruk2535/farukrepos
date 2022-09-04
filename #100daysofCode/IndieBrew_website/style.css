@@ -1,14 +1,16 @@
 *{
     border: none;
-    font-size: 20px;
+    font-size: 18px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap');
+
 body, html{
-    font-family: 'Archivo', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     /* background-image: linear-gradient( black white green); */
 
 
@@ -52,11 +54,7 @@ h6{
 
 img{
     object-fit: cover;
-    /* width: 100%; */
 }
-/* p{
-    line-height: 1.4rem;
-} */
 :root{
     --bg-white: white;
     --bg-primary: rgb(64, 0, 255);
@@ -71,7 +69,6 @@ img{
 a{
     text-decoration: none;
     color: black;
-    /* display: block; */
 }
 p{
     color: grey;
@@ -83,12 +80,17 @@ p{
     margin: auto;
 }
 header{
-    padding-block: 2rem;
+    padding-block: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-section{
-    margin-block: 4rem;
+section.intro, section.resources, section.waitlist{
+    margin-bottom: 4rem;
 }
+section.intro{
+    margin-top: 3rem;
+}
+
 #mobile__hamburger{
     display: none;
 }
@@ -105,7 +107,6 @@ section{
     border-radius: 4px;
     color: white;
     font-weight: 400;
-    /* width: max-content; */
 }
 
 .list__items{
@@ -118,7 +119,6 @@ section{
 .intro__container, .resources__container, .waitlist__container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* justify-content: center; */
     align-items: center;
 }
 .intro__left > *, .resources__left > *, .waitlist__right > *{
@@ -208,9 +208,6 @@ footer{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    section{
-        margin-block: 1rem;
-    }
 
     .nav__list{
         position: relative;
@@ -271,21 +268,39 @@ footer{
         margin-left: 0;
     }
 
+    .waitlist__right{
+        margin-left: 1rem;
+    }
+
     
 }
 
-/* *{
-    border: 1px solid black;
-} */
-
-/* end of footer design */
-
-/* end of landing page style */
 
 
 
 /* ++++++++++++++++++++++++++===================++++++++++++++++++++ */
 /* signup page style */
+
+.sign__body{
+    background-color: wheat;
+}
+.signup__left > *{
+    line-height: 1.5rem;
+    margin-block:2rem;
+    width: 90%;
+}
+.personalized li{
+    margin-block: 1.3rem;
+}
+.personalized li:first-child{
+    list-style-type: "\1F388";
+}
+.personalized li:nth-child(2){
+    list-style-type: "\1F4DC";
+}
+.personalized li:last-child{
+    list-style-type: "\1F4A1";
+}
 
 .signup__container{
     display: grid;
@@ -294,24 +309,31 @@ footer{
     gap: 4rem;
 }
 
-.header__container{
+.header__container, .header__container h5{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.header__container h5  img{
+    border: 1px solid rgb(198, 175, 133);
+    background-color: rgba(245, 226, 192, 0.7);
+    object-fit: cover;
+    padding: .4rem;
+    margin-right: .5rem;
 }
 
 .signup__left,.signup__right{
     padding: 2rem;
 }
 .signup__right{
-    background-color: gray;
+    background-color: white;
     border-radius: 5px;
 }
 
 form[name=signup__form]{
     width: 100%;
 }
-form[name=signup__form] > *{
+form[name=signup__form] > *:not(.btn-signup){
     display: block;
     margin-bottom: 2rem;
 }
@@ -327,21 +349,37 @@ form[name=signup__form] input:not(input[type=checkbox]){
     padding-inline: 1rem;
     border-radius: 4px;
 }
+.checkbox label a{
+    color: blue;
+    text-decoration: underline;
+}
 .btn-signup{
     background-color: var(--bg-primary);
     width: 100%;
     padding-inline: 7rem;
+    color: white;
     
 }
+@media screen and (max-width: 1200px) {
+    .signup__container{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .signup__left > *{
+        width: 100%;
+    }
 
-*{
-    border: 1px solid;
+    .btn-signup{
+        padding-inline: 0;
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    .back{
+        display: none;
+    }
 }
 
-.signup__left>*{
-    margin-block:2rem;
-
-}
 /* end of signup page style */
 
 

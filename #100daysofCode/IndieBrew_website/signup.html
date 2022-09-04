@@ -8,26 +8,28 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="sign__body">
     <header>
         <div class="container header__container">
-            <img src="./Assets/Logo.svg" alt="Logo">
-            <h5><span><img src="./Assets/Back Arrow.svg" alt=""></span>Back to homepage</h5>
+            <a href="index.html"><img src="./Assets/Logo.svg" alt="Logo"></a>
+            <a href="#"><h5><img src="./Assets/Back Arrow.svg" alt=""><span class="back">Back to homepage</span></h5></a>
         </div>
     </header>
 
     <section class="signup">
         <article class="container signup__container">
             <div class="signup__left">
-                <h2>Create your personalized feed.</h2>
-                <p><span class="bold">Over 20 resources.</span> With resources ranging from Reddit to IndieHackers, we've got all your needs covered</p>
-                <p><span class="bold">Delivered weekly</span> Every week at exactly Tuesday 12:00 P.M EST - expect a value-packed digest right in your email.</p>
-                <p><span class="bold">Unlimited ideas.</span> With all the ideas you'll be reading about, what's stopping you from cresting a sustainable startup?</p>
+                <h4>Create your personalized feed.</h4>
+                <ul class="personalized">
+                    <li><p ><span class="bold">Over 20 resources.</span> With resources ranging from Reddit to IndieHackers, we've got all your needs covered</p> </li>
+                    <li><p ><span class="bold">Delivered weekly</span> Every week at exactly Tuesday 12:00 P.M EST - expect a value-packed digest right in your email.</p></li>
+                    <li><p ><span class="bold">Unlimited ideas.</span> With all the ideas you'll be reading about, what's stopping you from cresting a sustainable startup?</p></li>
+                </ul>
             </div>
 
             <div class="signup__right">
                 <form action="#" method="post" name="signup__form">
-                    <h4>Create your IndieBrew Account</h4>
+                    <h5>Create your IndieBrew Account</h5>
 
                     <label for="email">Email</label>
                     <input type="text" name="email" id="email" placeholder="john@example.com">
@@ -35,7 +37,7 @@
                     <input type="text" name="fullName" id="fullName" placeholder="John Doe">
                     <label for="password">Passord</label>
                     <input type="password" name="password" id="password" placeholder="At least 8 character">
-                    <div>
+                    <div class="checkbox">
                         <label for="accept"><input type="checkbox" name="accept" id="accept">By creating an acount on IndieBrew, you agree to the <a href="#">Terms & Conditions</a>.</label>
                     </div>
                     <button class="btn btn-signup">Create an Account</button>
