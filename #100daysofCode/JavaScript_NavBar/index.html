@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript NavBar</title>
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <nav class="container header__container">
+            <ul>
+                <li><a href=""><img src="./Assets/Logo.svg" alt="Logo"></a></li>
+                <div class="nav__option">
+                    <img src="./Assets/Menu.svg" alt="hamburger" class="nav__mobile-hamburger">
+                    <div class="nav__list">
+                        <div class="dropdown mobile__dropdown">
+                            <li class="dropdown__list product__list"><a href="#">Product</a></li>
+                            <div class="dropdown__item header__dropdown">
+                                <div class="product__close">
+                                    <h6>Product</h6>
+                                    <img src="./Assets/Close.svg" alt="">
+                                </div>
+                                <li>
+                                    <h6>Spence</h6>
+                                </li>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam quae perferendis harum quod libero.</p>
+        
+                                <li>
+                                    <h6>Fiber Landing Page</h6>
+                                </li>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam quae perferendis harum quod libero.</p>
+        
+                                <li>
+                                    <h6>Gradie Sign Up Page</h6>
+                                </li>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam quae perferendis harum quod libero.</p>
+        
+                            </div>
+                            <li><a href="#">Challenges</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Other Links</a></li>
+                        </div>
+                        <div>
+                            <li><a href="#">Sign in</a></li>
+                            <li ><a href="#" class="btn btn-primary">Try for free</a></li>
+                        </div>
+        
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <div class="container intro__container">
+            <div class="intro__left">
+                <h1>Ondeck is your remote </h1>
+                <h1 class="text-orange">conference calling tool</h1>
+                <p>Ondeck is a service that allows you to create beautiful, online, and encrypted video cats for you and your remote team</p>
+                <span><a href="#" class="btn btn-primary">Try for free</a></span>    
+                <div class="rating">
+                    <p>5.0 Rating based on reviews from </p>
+                    <ul class="intro__reviews">
+                        <li><img src="./Assets/Capterra Logo.svg" alt="Capterra"></li>
+                        <li><img src="./Assets/AlternativeTo Logo.svg" alt="AlternativeTo"></li>
+                        <li><img src="./Assets/Fiber_Icon.svg" alt="Capterra"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="intro__right">
+                <img src="./Assets/Hero Image.png" alt="">
+            </div>
+        </div>
+
+    </section>
+    <section class="trustees">
+        <div class="container trustees__container">
+            <p>Trusted by 3+ million people at companies like</p>
+            <ul>
+                <li><img src="./Assets/Netflix Logo.svg" alt="Netflix"></li>
+                <li><img src="./Assets/Shopify Logo.svg" alt="Shopify"></li>
+                <li><img src="./Assets/Spotify Logo.svg" alt="Spotify"></li>
+                <li><img src="./Assets/Walmart Logo.svg" alt="Walmart"></li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        const hambugger = document.querySelector('.nav__mobile-hamburger')
+            hambugger.addEventListener('click', ()=>{
+            document.querySelector('.nav__list').classList.toggle('show');
+        })
+        const productAnchor = document.querySelector('.product__list')
+            productAnchor.addEventListener('click', ()=>{
+            document.querySelector('.header__dropdown').classList.toggle('show');
+
+        })
+        const productClose = document.querySelector('.product__close')
+            productClose.addEventListener('click', ()=>{
+            document.querySelector('.header__dropdown').classList.toggle('show');
+
+        })
+
+
+        console.log('hello')
+    </script>   
+    
+    
+</body>
+
+</html>
