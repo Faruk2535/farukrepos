@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosterr</title>
+    <link rel="stylesheet" href="style.css "    type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&family=Playfair+Display:wght@400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container nav__container">
+            <div class="logo">
+                <img src="./Assets/Logo.svg" alt="">
+                <a href="#" class="badge">Hosterr is hiring!</a>
+
+            </div>
+
+            <div class="center__links">
+                <a href="#">Plans</a>
+                <a href="#">Find Domain</a>
+                <a href="#">Why Hosterr</a>
+            </div>
+
+            <div class="right__links">
+                <a href="#">Sign in</a>
+                <a href="#" class="btn join__btn btn-primary">Join Waitlist</a>
+            </div>
+            <div class="mobile__links dropdown">
+                <img src="./Assets/Hamburger Menu.svg" alt="Hamburger" class="droptdo">
+                <div class="dropdown__content">
+                    <a href="#">Plans</a>
+                    <a href="#">Find Domain</a>
+                    <a href="#">Why Hosterr</a>
+                    <a href="#">Sign in</a>
+                    <a href="#" class="btn join__btn btn-primary">Join Waitlist</a>
+    
+    
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="main">
+        <div class="container main__container">
+            <div class="main__container-left">
+                <h1>Host your website in less than 5 minutes.</h1>
+                <p>With Hosterr, get your website up and running in less than 5 minutes with the moste competitive pricing packages available online.</p>
+                <div class="join__waitlist">
+                    <input type="text" name="email" id="email" placeholder="Enter e-mail address">
+                    <a href="#" class="btn join__btn btn-primary">Join Waitlist</a>
+                </div>
+                <p class="check"><img src="./Assets/Checkmark.svg" alt="Checkmark"> No spam, ever. Unsubscribe anytime.</p>
+            </div>
+
+            <div class="main__container-right">
+                <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur maiores dignissimos alias laborum adipisci mollitia tempore, sint ut doloremque vitae, nihil illum doloribus laudantium sit voluptatem quisquam! Saepe, asperiores ipsam deserunt aperiam repellat blanditiis quo. Quidem, distinctio corrupti suscipit quo praesentium odio. Quis facilis, dolor illo ipsam qui consectetur earum, inventore nemo ex tempora quia eum rerum necessitatibus iure, doloremque eaque asperiores aspernatur repellendus esse hic quo nisi blanditiis? Quos molestiae officia id ut, itaque numquam cumque aut labore corporis optio repellat tempora magni placeat dolores, nemo, voluptatum quibusdam! Facere ad saepe corrupti nobis pariatur quisquam, tempora molestias, labore magnam harum, voluptates iste eius sed incidunt. Optio eos odio perferendis excepturi aut itaque iusto cupiditate, pariatur alias sequi molestias repellendus tenetur harum adipisci magni iure nobis recusandae dignissimos quasi dolorum nam? Exercitationem quam facilis quibusdam laudantium perspiciatis tempore amet nulla rem veniam beatae excepturi soluta, maiores nisi saepe, sunt quaerat. -->
+                <!-- <figure> -->
+                    <img src="./Assets/Blue Shape.svg" alt="Shape">
+                    <img src="./Assets/Pink Shape.svg" alt="Shape">
+                    <img src="./Assets/Purple Shape.svg" alt="Shape">
+                    <img src="./Assets/Hero Image (Model).png" alt="image">
+    
+
+                <!-- </figure> -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer__container">
+            <div class="footer__socials">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>    
+
+            <div class="footer__help">
+                <img src="./Assets/Help Avatar.svg" alt="help">
+                <p>Have any questions? <br>
+                <em>Talk to a specialist</em></p>
+            </div>
+        </div>
+
+
+    
+    </footer>
+
+
+    <script>
+        const hambugger = document.querySelector('.mobile__links img');
+
+hambugger.addEventListener('click', ()=>{
+    document.querySelector('.dropdown__content').classList.toggle('show__content');
+})
+    </script>
+    
+</body>
+</html>

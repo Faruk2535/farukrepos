@@ -2,8 +2,10 @@ body{
     background-color: rgba(0,0,0,0.7);
     z-index: -10;
     display: flex;
+    outline: none;
     flex-direction: column;
     gap: 4rem;
+    border: none;
 }
 
 .background{
@@ -33,9 +35,33 @@ button{
     font-size: 1.7rem;
 }
 
+.uil-message{
+    /* visibility: hidden; */
+    padding: .5rem 2rem .5rem 0;
+}
+/* *{
+    outline: 1px solid red;
+} */
+.message__btn span{
+    padding: 1rem 1rem 1rem 0;
 
-.btn__div{
-    transition: all  11s;
+}
+.message__btn{
+    transition: 400ms ease-in;
+    padding: 1rem 0;
+}
+.message__btn:hover .uil-message{
+    visibility: visible;
+    transition: 200ms ease-in;
+    transform: rotate3d(100deg);
+
+    
+    padding: .5rem 0 .5rem 2rem;
+
+}
+
+/* .btn__div{
+    transition: all  111s;
 }
 
 .uil-message .sspan{
@@ -52,7 +78,7 @@ button{
 .btn__div button:hover .sspan{
     visibility: hidden;
     overflow: hidden;
-}
+} */
 
 
 /* .send__icon{

@@ -1,0 +1,282 @@
+*{
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5rem;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;    
+    box-sizing: border-box;
+
+    
+    /* border: 1px solid black; */
+}
+
+html, body{
+    background-color: rgb(231, 223, 185);
+    color: rgb(70, 67, 67);
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    color: rgba(99, 93, 93, 0.8);
+}
+
+li{
+    list-style: none;
+}
+img{
+    object-fit: cover;
+
+}
+
+:root{
+
+    --btn-primary: blue;
+
+    --lg-screen: 80%;
+    --md-screen: 87%;
+    --sm-screen: 95%;
+}
+
+.top-margin{
+    margin-top: 1rem;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+
+}
+h2{
+    font-size: 2.2rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h4{
+    font-size: 1.5rem;
+}
+h5{
+    font-size: 1.2rem;
+}
+
+.btn{
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    transition: 200ms;
+    
+}
+
+.btn-primary{
+    background-color: var(--btn-primary);
+    color: white;
+}
+
+.btn-primary:hover{
+    background-color: rgba(0, 0, 255, 0.8);
+}
+
+
+img{
+    object-fit: contain;
+}
+
+section{
+    margin-block: 5rem;
+}
+
+.container{
+    width: var(--lg-screen);
+    margin: auto;
+}
+
+/* ====================header style================ */
+header{
+    padding-block: 1.5rem;
+}
+
+.mobile__links{
+    display: none;
+}
+.nav__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo, .center__links, .right__links{
+    display: flex;    
+    align-items: center;
+}
+.nav__container > div {
+    gap: 1rem;
+}
+
+.badge{
+    background-image: linear-gradient(to right, rgb(206, 176, 7), rgb(238, 53, 130));
+    padding-inline: 1rem;
+    border-radius: 1rem;
+    color: white;
+}
+/* ==================== end of header style================ */
+
+
+/* ==================== main style================ */
+.main__container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.main__container-left> *{
+    margin-bottom: .7rem;
+}
+.main__container-left h1{
+    color:  black;
+    line-height: 3rem;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+}
+.check{
+    display: flex;
+    gap: 1rem;
+}
+.join__waitlist{
+    display: flex;
+    width: 100;
+    gap: .5rem;
+}
+#email{
+    padding-inline: 1rem;
+    border-radius: 4px;
+
+}
+
+
+.main__container-right{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 20rem;
+}
+
+.main__container-right img{
+    position: absolute;
+    height: 20rem;
+
+    margin: auto;
+
+
+}
+
+.main__container-right img:first-child{
+    rotate: -40deg;
+}
+.main__container-right img:nth-child(2){
+    rotate: -25deg;
+}
+.main__container-right img:nth-child(3){
+    rotate: -13deg;
+}
+/* ====================end of  main style================ */
+/* ====================footer style================ */
+
+.footer__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footer__socials{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer__help{
+    display: flex;
+    gap: 1rem;
+}
+
+/* ====================end footer style================ */
+/* ====================media queries================ */
+
+@media screen and (max-width: 1000px) {
+    /* *{
+        outline: 1px solid black;
+    }
+ */
+ .container{
+    width: var(--md-screen);
+}
+
+    .mobile__links{
+        display: block;
+        cursor: pointer;
+        position: relative;
+    }
+    .dropdown__content{
+        position: absolute;
+        right: 0;
+        width: max-content;
+        display: none;
+        border: 1px solid black;
+        z-index: 100;
+        background-color: rgba(240, 248, 255, 0.4);
+    }
+    .dropdown__content a{
+        display: block;
+        padding: 1rem 1rem;
+        color: black !important;
+
+        transition: all   400ms;
+
+
+        color: white;
+    }
+    .dropdown__content a:hover{
+        background-color: blue;
+    }
+
+
+    .center__links, .right__links{
+        display: none;
+    }
+    .mobile__links{
+        display: block;
+    }
+    .main__container{
+        grid-template-columns: 1fr !important;
+    }
+
+    .main__container-right{
+        order: 0;
+    }
+    .main__container-left{
+        order: 1;
+    }
+    
+
+
+}
+
+@media screen and (max-width: 1000px) {
+    .container{
+        width: var(--sm-screen);
+    }
+    .footer__container{
+        flex-direction: column;
+        gap: 2rem;
+
+    }
+}
+
+.show__content{
+    display: block ;
+}
+/* ====================end of media queries================ */

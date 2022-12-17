@@ -10,15 +10,11 @@
 </head>
 <body>
     <section id="header__section">
-        <header>
-            <h2>Krative Technologies</h2>
-        </header>
-
     </section>
     <section class="user__section">
         <div class="container user__container">
             <div class="left__container ">
-                <div class="login__container">
+                <div class="login__container show" id="user-form" >
                     <h2>Login Here</h2>
                     <p id="login__error"></p>
                     <form action="./dashboard.html"  method="GET" name="login__form" onsubmit="return validateLogin()" >
@@ -27,13 +23,15 @@
                             <input type="password" name="password" id="password" placeholder="Password" >
                         </div>    
                         <button type="submit" class="btn btn__login">Login</button>
+                        <p id="forgot"><a href="#">Forgot Password?</a> </p>
+
                     </form>
                     <div class="user__help">
                         <p><a href="#">Forgot Password?</a> </p>
                         <h4>New User? <button class="btn">SignUp</button></h4>
                     </div>
                 </div>
-                <div class="signup__container">
+                <div class="signup__container " id="user-form">
     
                     <h2>SignUP</h2>
                     <p id="signup__error"></p>
@@ -53,10 +51,20 @@
                     </div>
                 </div>
             </div>
-            <div class="right__container " >
-                <h2>Already a user?</h2>
 
-                <button class="btn ">Login</button>
+            <div class="right__container">
+                <div class="right__container-child signup show" >
+                    <h2 >  New User?  </h2>
+    
+                    <button class="btn ">SignUP</button>
+                </div>
+                <div class="right__container-child login " >
+                    <h2>  Already a User?  </h2>
+    
+                    <button class="btn ">login</button>
+                </div>
+    
+
             </div>
         </div>
     </section>
