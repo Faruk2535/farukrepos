@@ -40,11 +40,11 @@
             <div class="player__name">
                 <div class="name__one">
                     <label for="name1">Player 1:</label>
-                    <input type="text" name="name1" id="name1" placeholder="Player Name">
+                    <input type="text" name="name1" id="name1" placeholder="Player Name" required>
                 </div>
                 <div class="name__two">
                     <label for="name2">Player 2:</label>
-                    <input type="text" name="name2" id="name2" placeholder="Player Name">
+                    <input type="text" name="name2" id="name2" placeholder="Player Name" required>
                 </div>
 
                 <div class="btn__group">
@@ -55,10 +55,10 @@
             </div>
 
             <div class="start">
-                <p class="player1__name">Lorem, ipsum.</p>
+                <p class="player1__name"></p>
 
                 <h2>vs</h2>
-                <p class="player2__name">Lorem, ipsum.</p>
+                <p class="player2__name"></p>
 
                 <div>
                     <button class="btn next__btn start__btn">start</button>
@@ -67,13 +67,19 @@
             </div>
         </div>
     </section>
+    <div class="win__blank"></div>
 
-    <section class="container">
+    <section class="result">
+        <div class="winner"></div>
+        <button class="btn restart">Start</button>
+    </section>
+
+    <section class="container board">
         <div class="scoreboard">
             <p>Scores</p>
             <div class="player__score">
-                <p class="player1"></p>
-                <p class="player2"></p>
+                <p class="player1"> <span class="player1score">0</span></p>
+                <p class="player2"><span class="player2score">0</span></p>
             </div>
         </div>
         <div class="box__container">

@@ -3,16 +3,21 @@ const getElement = (element)=>{
 }
 
 // list of btns
+const oldBoxes = getElement('.box__container').innerHTML
+// const oldBoard = getElement('.board').html()
 const allBox = document.querySelectorAll('.tic');
 let playerVsBot, playerVsPlayer;
+let gameBoard = getElement('.board')
 
 let  player1, player2;
 let players = ["X", "O"];
 
 
 
-let player1Score = 0;
-let player2Score = 0;
+let scores = {
+    player1: 0,
+    player2: 0
+}
 
 // const allPossibleOutcome = {
 //     poss1: [0,1,2],
@@ -45,8 +50,8 @@ for (let i = 0; i < allNextBtn.length; i++) {
     allNextBtn[i].addEventListener('click', ()=>{
         if(i === (allNextBtn.length -1)){
             getElement('.intro').style.display = 'none';
-            getElement('.player1').innerHTML = player1 + ": " + player1Score;
-            getElement('.player2').innerHTML = player2 + ": " + player2Score;
+            getElement('.player1').textContent = player1 + ":- " + scores.player1;
+            getElement('.player2').innerHTML = player2 + ":- " + scores.player2;
 
         } else{
             allNextBtn[i].parentElement.parentElement.style.display = 'none'
@@ -85,7 +90,8 @@ getElement('.player__next').addEventListener('click', ()=>{
         playerVsBot = true;
         playerVsPlayer = false;
         getElement('.name__two').style.display = 'none'
-        getElement('.player2__name').innerHTML = "Computer";
+        // getElement('.player2__name').innerHTML = "Computer";
+        player2 = "Computer"
 
     } else if(getElement("#twoplayer").checked){
         playerVsPlayer = true;
@@ -96,19 +102,41 @@ getElement('.player__next').addEventListener('click', ()=>{
 
 })
 
+getElement('.restart').addEventListener('click', ()=>{
+    for (let y = 0; y < allBox.length; y++) {
+        allBox[y].innerHTML = "";
+        allBox[y].style.pointerEvents = 'auto';
+        players = ["X", "O"];
+    
+    }
+    getElement('.win__blank').style.display = 'none'
+    getElement('.winner').innerHTML = " "
+
+
+    gameBoard.classList.toggle('startAnimation')
+
+
+})
 getElement('.btn__name').addEventListener('click', ()=>{
-    player1 = getElement('#name1').value
-    player2 = getElement('#name2').value
-    if(getElement("#twoplayer").checked == true){
+    player1 = getElement('#name1').value || "User"
+    player2 = getElement('#name2').value || "Computer"
+    // if(getElement("#twoplayer").checked == true){
         getElement('.player1__name').innerHTML = player1;
         getElement('.player2__name').innerHTML = player2;
-    }else{
-        getElement('.player1__name').innerHTML = player1;
-    }
+    // }else{
+    //     getElement('.player1__name').innerHTML = player1;
+    //     getElement('.player2__name').innerHTML = player2;
+    // }
+    getElement('#name1').value = "";
+    getElement('#name2').value = "";
+
 
 
 })
 getElement('.start__btn').addEventListener('click', ()=>{
+    getElement('.result').classList.add('result__show')
+    getElement('.board').classList.toggle('startAnimation')
+
   
 
 })
@@ -123,11 +151,13 @@ for (let i = 0; i < allBox.length; i++) {
     allBox[i].addEventListener('click', function play(){
         if(playerVsBot === true){
             humanPlay(i);
-            botPlay()
+            botPlay(i)
         }else if(playerVsPlayer == true){
             humanPlay(i, players)
         }
-        allBox[i].removeEventListener('click', play);
+        allBox[i].style.pointerEvents = 'none'
+
+        // allBox[i].removeEventListener('click', play);
 
     })
 
@@ -136,13 +166,17 @@ for (let i = 0; i < allBox.length; i++) {
 
 
 
-function humanPlay(i, players){
+async function humanPlay(i, players){
 
     if(players){
         allBox[i].innerHTML = players[0];
         players.push(players.shift());
+        gameRules(i);
+
     } else{
         allBox[i].innerHTML = "X";
+        gameRules(i);
+
     }
 
     if(allBox[i].innerHTML == "X"){
@@ -151,13 +185,12 @@ function humanPlay(i, players){
         allBox[i].style.color = 'green'
     }
 
-    gameRules(i)
 
 }
 
 
 
-async function botPlay(){
+async function botPlay(i){
     setTimeout(function botPlays(){
         let allEmptyBox = [ ];
         for (let i = 0; i < allBox.length; i++) {
@@ -165,11 +198,10 @@ async function botPlay(){
                 allEmptyBox.push(allBox[i])
             }
         }
-        // let botSelect = allEmptyBox[Math.round(Math.random() * allEmptyBox.length)];
-        let botSelect = allEmptyBox[Math.ceil(Math.random() * allEmptyBox.length) ];
+        let botSelect = allEmptyBox[Math.floor(Math.random() * allEmptyBox.length) ];
         botSelect.innerHTML = 'O';
-        // botSelect.removeEventListener("click", play)
-        // botSelect.style.cursor = 'not-allowed';
+        botSelect.style.pointerEvents = 'none';
+
         gameRules(botSelect);
     }, 2000)
 
@@ -177,17 +209,45 @@ async function botPlay(){
 
 // GAME ALGORITHM
 
-function gameRules(i, botSelect){
-    for (let x = 0; x < allPossibleOutcome.length; x++) {
-        
-        if(allBox[allPossibleOutcome[x][0]].innerHTML == allBox[i].innerHTML && allBox[allPossibleOutcome[x][1]].innerHTML == allBox[i].innerHTML && allBox[allPossibleOutcome[x][2]].innerHTML == allBox[i].innerHTML ) {
-            alert(allBox[i].innerHTML + ' WINS')
-            console.log('hello')
-            // alert(allBox[i].innerHTML || botSelect.innerHTML)
+function gameRules(i){
+    let playerTag = {
+        "X": player1,
+        "O": player2
+    }
+    let playerPos = {
+        "X": 'player1',
+        "O": 'player2'
+    }
 
-        }else if(allBox[allPossibleOutcome[x][0]].innerHTML == botSelect.innerHTML && allBox[allPossibleOutcome[x][1]].innerHTML == botSelect.innerHTML && allBox[allPossibleOutcome[x][2]].innerHTML == botSelect.innerHTML){
-            alert('O WINS')
+    for (let x = 0; x < allPossibleOutcome.length; x++) {
+        if(i){
+            // ERROR IN CODE BOT  ALGORITHM NOT SUFFICIENT
+            if(allBox[allPossibleOutcome[x][0]].innerHTML == allBox[i].innerHTML  && allBox[allPossibleOutcome[x][1]].innerHTML == allBox[i].innerHTML && allBox[allPossibleOutcome[x][2]].innerHTML == allBox[i].innerHTML  ){
+                getElement('.win__blank').style.display = 'block'
+                getElement('.winner').innerHTML = playerTag[allBox[i].innerHTML]  + " Wins";
+
+                scores[playerPos[allBox[i].innerHTML]] += 1;
+
+                getElement('.player1').textContent = player1 + ":- " + scores.player1;
+                getElement('.player2').innerHTML = player2 + ":- " + scores.player2;
+            }
+        }else{
+            // ERROR IN CODE BUG TO BE FIX
+            // CODE DID NOT CAPTURE WHEN BOT WINS ONLY HUMAN
+            if(allBox[allPossibleOutcome[x][0]].innerHTML == "O" && allBox[allPossibleOutcome[x][1]].innerHTML == "O" && allBox[allPossibleOutcome[x][2]].innerHTML == "O"){
+                alert('O WINS')
+                getElement('.winner').innerHTML = playerTag["O"]  + " Wins";
+                scores[playerPos["O"]] += 1;
+
+            }
         }
+        
+        // if(allBox[allPossibleOutcome[x][0]].innerHTML == allBox[i].innerHTML && allBox[allPossibleOutcome[x][1]].innerHTML == allBox[i].innerHTML && allBox[allPossibleOutcome[x][2]].innerHTML == allBox[i].innerHTML ) {
+        //     alert(allBox[i].innerHTML + ' WINS')
+        //     console.log('hello')
+        //     // alert(allBox[i].innerHTML || botSelect.innerHTML)
+
+        // }else 
 
         
     }
