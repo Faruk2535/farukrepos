@@ -129,6 +129,82 @@ section.intro{
     width: 100%;
 }
 
+/* index page animation */
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 1s linear forwards;
+}
+.serv{
+    animation-delay: .5s;
+}
+@keyframes moveup {
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.intro__right{
+    opacity: 0;
+    transform: translateX(40px);
+    animation: leftin .7s linear forwards;
+    animation-delay: 1s;
+}
+@keyframes leftin {
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+        transform: scale(1);
+    }
+    
+}
+@keyframes rightin {
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+        transform: scale(1);
+    }
+    
+}
+
+.btn-anim{
+    animation: scaleup 500ms linear forwards;
+    opacity: 0;
+    transform: scale(.8);
+    animation-delay: 1.2s;
+}
+
+
+@keyframes scaleup {
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+.resources__right{
+    opacity: 0;
+    transform: translateX(50px);
+    transform: scale(.7);
+    animation: leftin .7s linear forwards;
+
+}
+.waitlist__right{
+    opacity: 0;
+    transform: translateX(50px);
+    animation: leftin .7s linear forwards;
+
+}
+.waitlist__left{
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: rightin .7s linear forwards;
+
+
+}
+
+/* end of index page animation */
+
 /* footer design */
 
 footer{

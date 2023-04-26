@@ -141,6 +141,7 @@ header{
     font-size: 3rem;
     font-family: 'Playfair Display', serif;
     font-weight: bolder;
+    transition: 200ms all;
 }
 .check{
     display: flex;
@@ -183,6 +184,61 @@ header{
 .main__container-right img:nth-child(3){
     rotate: -13deg;
 }
+
+/* index page animation */
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 1s linear forwards;
+}
+.serv{
+    animation-delay: .5s;
+}
+@keyframes moveup {
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.main__container-right{
+    opacity: 0;
+    transform: translateX(40px);
+    animation: leftin .7s linear forwards;
+    animation-delay: 1s;
+}
+@keyframes leftin {
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+
+.btn-anim{
+    animation: scaleup 500ms linear forwards;
+    opacity: 0;
+    transform: scale(.8);
+    animation-delay: 1.2s;
+}
+
+
+/* .tes-text{
+    opacity: 0;
+    scale: .6;
+    animation: scaleup 600ms linear forwards;
+} */
+
+@keyframes scaleup {
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+
+
+/* end of index page animation */
+
 /* ====================end of  main style================ */
 /* ====================footer style================ */
 

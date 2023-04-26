@@ -53,6 +53,66 @@
     display: none;
 }
 
+/* index page animation */
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 1s linear forwards;
+}
+.body p.anim{
+    animation-delay: .5s;
+}
+@keyframes moveup {
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.camplist{
+    opacity: 0;
+    transform: translateX(40px);
+    animation: leftin .7s linear forwards;
+    animation-delay: 1s;
+}
+@keyframes leftin {
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+
+.btn-anim{
+    animation: scaleup 500ms linear forwards;
+    opacity: 0;
+    transform: scale(.8);
+    animation-delay: 1.2s;
+}
+
+
+.tes-text{
+    opacity: 0;
+    scale: .6;
+    animation: scaleup 600ms linear forwards;
+}
+
+@keyframes scaleup {
+    100%{
+        opacity: 1;
+        scale: 1;
+    }
+    
+}
+.testimony{
+    opacity: 0;
+    transform: translateX(40px);
+    animation: leftin 600ms linear forwards;
+    animation-delay: .5s;
+
+}
+
+/* end of index page animation */
+
 @media screen and (max-width: 1200px){
 
 
@@ -303,6 +363,7 @@ form[name="search__form"] input{
     padding: 1rem;
     border-radius: .3rem;
     color: rgb(83, 81, 81);
+    animation: fadein 1s;
 
 }
 .campground > *{
@@ -327,6 +388,21 @@ form[name="search__form"] input{
     font-weight: 800;
 
 
+}
+.campground .btn{
+    transition: 200ms all;
+
+}
+.campground .btn:hover{
+    background-color: skyblue;
+
+}
+
+
+@keyframes fadein {
+    0%{opacity: 0; scale: .7;}
+    100%{opacity: 1; scale: 1;}
+    
 }
 @media screen and (max-width: 1200px){
     .campgrounds{
